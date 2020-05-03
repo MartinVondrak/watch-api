@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MartinVondrak/watch-api.svg?branch=master)](https://travis-ci.org/MartinVondrak/watch-api)
+
 # Watch API
 
 This is a brief summary for application that was created to demonstrate some skills
