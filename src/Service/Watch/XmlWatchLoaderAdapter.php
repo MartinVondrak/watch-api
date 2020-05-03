@@ -25,6 +25,6 @@ class XmlWatchLoaderAdapter implements WatchExternalSourceInterface
             return null;
         }
 
-        return new WatchDto($watch['id'], $watch['title'], $watch['price'], $watch['desc']);
+        return $watch ? new WatchDto($watch['id'], $watch['title'], $watch['price'], $watch['desc']) : null;
     }
 }

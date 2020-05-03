@@ -6,6 +6,10 @@ use App\Exception\XmlLoaderException;
 
 class DummyXmlWatchLoader implements XmlWatchLoader
 {
+    /**
+     * @param string $watchIdentification
+     * @return int[]|string[]|null
+     */
     public function loadByIdFromXml(string $watchIdentification): ?array
     {
         $watchId = (int)$watchIdentification;

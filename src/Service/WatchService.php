@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\DTO\WatchDto;
 use App\Service\Watch\WatchExternalSourceInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
@@ -20,7 +21,7 @@ class WatchService
 
     public function retrieveById(int $id): ?WatchDto
     {
-        return $this->watchCache->get((string)$id, function (ItemInterface $item) use ($id) {
+        $watch = $this->watchCache->get((string)$id, function (ItemInterface $item) use ($id) {
             $watch = $this->watchExternalSource->retrieveById($id);
 
             if (null !== $watch) {
@@ -29,5 +30,11 @@ class WatchService
 
             return $watch;
         });
+
+        if (null === $watch) {
+            throw new NotFoundHttpException();
+        }
+
+        return $watch;
     }
 }

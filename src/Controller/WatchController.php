@@ -29,7 +29,6 @@ class WatchController extends AbstractController
      */
     public function getAction(int $id): Response
     {
-        $watch = $this->watchService->retrieveById($id);
-        return new JsonResponse($watch);
+        return new JsonResponse($this->watchService->retrieveById($id));
     }
 }
