@@ -1,4 +1,6 @@
 {
+    "name": "martinvondrak/watch-api",
+    "description": "Simple API endpoint demonstrating some skills to get the PHP dev position at Spendee.",
     "type": "project",
     "license": "proprietary",
     "require": {
