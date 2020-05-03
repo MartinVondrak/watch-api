@@ -20,7 +20,7 @@ class DummyXmlWatchLoader implements XmlWatchLoader
             $watch = [
                 'id' => $watchId,
                 'title' => sprintf('Watch %d', $watchId),
-                'price' => random_int(200, 200000),
+                'price' => $watchId * 500,
                 'desc' => sprintf('Watch %d description', $watchId),
             ];
         } elseif (2 === $mod) {

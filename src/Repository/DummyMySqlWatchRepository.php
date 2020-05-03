@@ -16,7 +16,7 @@ class DummyMySqlWatchRepository implements MySqlWatchRepository
             return new MySqlWatchDTO(
                 $id,
                 sprintf('Watch %d', $id),
-                random_int(200, 200000),
+                $id * 500,
                 sprintf('Watch %d description', $id)
             );
         }
