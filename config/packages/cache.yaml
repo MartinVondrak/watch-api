@@ -17,4 +17,4 @@ framework:
         # Namespaced pools use the above "app" backend by default
         pools:
             watch_cache:
-                adapter: cache.adapter.memcached
+                adapter: cache.adapter.filesystem
