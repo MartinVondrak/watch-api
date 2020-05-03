@@ -23,6 +23,9 @@ I believe, none of the consequences mentioned above will affect the evaluation
 of the task as the main goal was to integrate provided interfaces with caching
 support.
 
+I left the build failing as it is static code analysis failing of provided
+interfaces that must not be touched.
+
 ## Usage
 
 ### Prerequisites
